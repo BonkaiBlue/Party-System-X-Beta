@@ -51,6 +51,37 @@ That's it. Control and touch-layout configuration will be documented in a future
 
 ---
 
+## Technical architecture
+
+Party-System X Beta is built as an Android/Gradle APK around the native `dnbootstrap` launcher stack.
+
+Graphics path: Android/Gradle APK -> `:ltw` native compatibility layer -> GLFW/native graphics -> bundled ANGLE libraries -> native `dnbootstrap` launcher -> .NET nethost/hostfxr -> `Vintagestory.dll`.
+
+### Rendering path
+
+The launcher attempts OpenGL ES 3.2 first and falls back to OpenGL ES 3.1 when required by the device or driver.
+
+### LTW
+
+`ltw` (Large Thin Wrapper) provides the OpenGL compatibility layer used by the Android build, including graphics/context compatibility, extension handling, and shader-related adaptation.
+
+### ANGLE
+
+The Android application currently bundles `app/libs/angle.aar`, providing native ANGLE libraries for supported Android ABIs, including ARM64. The exact upstream ANGLE version and provenance are still being documented and should be recorded before a release build is treated as final.
+
+### Project lineage and attribution
+
+This project builds upon multiple upstream components:
+
+1. **Party-System X Beta** — Bonkai Xengetsu / David J. Brown
+2. **dnbootstrap** — VSMobile and contributors
+3. **GLFW Android fork/submodule** — VSMobile/glfw, tracked under `app/src/main/cpp/glfw34`
+4. **LTW** — MojoLauncher and contributors; upstream native source includes attribution to artDev, SerpentSpirale, and CADIndie
+5. **ANGLE and other third-party components** — respective upstream licenses and attribution requirements apply
+6. **Vintage Story** — Anego Studios; proprietary software. This project does not redistribute the game and is not affiliated with or endorsed by Anego Studios.
+
+This section will be expanded as additional dependencies and exact upstream provenance are verified.
+
 ## Known issues
 
 - <!-- List current minor bugs here -->
