@@ -62,6 +62,6 @@ dependencies {
     implementation 'com.google.code.gson:gson:2.13.2'
 
     implementation 'com.github.MojoLauncher:alsoft-android-aar:f369161d5f'
-    implementation 'com.github.MojoLauncher:LTW:abd4672c6a'
+    implementation project(':ltw')
     implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
 }
