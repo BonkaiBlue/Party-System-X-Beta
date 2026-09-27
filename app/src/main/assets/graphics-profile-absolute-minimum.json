@@ -1,0 +1,26 @@
+{
+  "intSettings": {
+    "cloudRenderMode": 0,
+    "mipmapLevel": 3,
+    "graphicsPresetId": 0,
+    "shadowMapQuality": 0,
+    "optimizeRamMode": 2,
+    "ssaoQuality": 0,
+    "viewDistance": 32,
+    "particleLevel": 0,
+    "maxDynamicLights": 0,
+    "godRays": 0
+  },
+  "boolSettings": {
+    "dynamicColorGrading": false,
+    "smoothShadows": false,
+    "wavingStuff": false,
+    "liquidFoamAndShinyEffect": false,
+    "fxaa": false,
+    "bloom": false,
+    "viewBobbing": false
+  },
+  "floatSettings": {
+    "ssaa": 0.25
+  }
+}

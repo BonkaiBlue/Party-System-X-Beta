@@ -1,5 +1,6 @@
 package git.artdeell.dnbootstrap;
 
+import android.content.res.AssetManager;
 import android.system.Os;
 
 import java.io.File;
@@ -18,7 +19,11 @@ public class DotnetStarter {
         return null;
     }
 
-    public static void kickstart(AppDirs appDirs, File appNativeDir) throws IOException {
+    public static void kickstart(
+            AppDirs appDirs,
+            File appNativeDir,
+            AssetManager assets
+    ) throws IOException {
 
         File homeDir = new File(appDirs.base, "home");
         File certsDir = findCertsDir();
@@ -40,6 +45,12 @@ public class DotnetStarter {
 
         symlinkUtil.symlinkLibrary("libopenal.so", "libopenal.so.1");
         symlinkUtil.symlinkLibrary("libcairo.so", "libcairo.so.2");
+
+        GraphicsProfileManager.applyIfNeeded(
+                appDirs.base,
+                homeDir,
+                assets
+        );
 
         MainActivity.runDotnet(appDirs.runtime.getAbsolutePath(), trueVsDir.getAbsolutePath(), appNativeDir.getAbsolutePath());
         System.exit(0);

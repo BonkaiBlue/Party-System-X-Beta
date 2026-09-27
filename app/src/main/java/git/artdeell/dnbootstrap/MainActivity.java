@@ -91,7 +91,11 @@ public class MainActivity extends Activity implements SoftInputCallback, LayoutE
 
     public void kickstart() {
         try {
-            DotnetStarter.kickstart(new AppDirs(getFilesDir()), new File(getApplicationInfo().nativeLibraryDir));
+            DotnetStarter.kickstart(
+                    new AppDirs(getFilesDir()),
+                    new File(getApplicationInfo().nativeLibraryDir),
+                    getAssets()
+            );
         }catch (Throwable t) {
             Utils.showErrorDialog(this, t, true);
         }

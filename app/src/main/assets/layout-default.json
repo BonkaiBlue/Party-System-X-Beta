@@ -9,7 +9,7 @@
         65,
         83
       ],
-      "label": "AS",
+      "label": "\u2199",
       "layoutParams": {
         "alignmentHorizontal": 0,
         "alignmentVertical": 3,
@@ -31,7 +31,7 @@
         87,
         68
       ],
-      "label": "WD",
+      "label": "\u2197",
       "layoutParams": {
         "alignmentHorizontal": 0,
         "alignmentVertical": 3,
@@ -53,7 +53,7 @@
         65,
         87
       ],
-      "label": "AW",
+      "label": "\u2196",
       "layoutParams": {
         "alignmentHorizontal": 0,
         "alignmentVertical": 3,
@@ -75,7 +75,7 @@
         65,
         0
       ],
-      "label": "A",
+      "label": "\u2190",
       "layoutParams": {
         "alignmentHorizontal": 0,
         "alignmentVertical": 3,
@@ -97,7 +97,7 @@
         87,
         0
       ],
-      "label": "W",
+      "label": "\u2191",
       "layoutParams": {
         "alignmentHorizontal": 0,
         "alignmentVertical": 3,
@@ -119,7 +119,7 @@
         68,
         0
       ],
-      "label": "D",
+      "label": "\u2192",
       "layoutParams": {
         "alignmentHorizontal": 0,
         "alignmentVertical": 3,
@@ -141,7 +141,7 @@
         83,
         68
       ],
-      "label": "SD",
+      "label": "\u2198",
       "layoutParams": {
         "alignmentHorizontal": 0,
         "alignmentVertical": 3,
@@ -163,7 +163,7 @@
         83,
         0
       ],
-      "label": "S",
+      "label": "\u2193",
       "layoutParams": {
         "alignmentHorizontal": 0,
         "alignmentVertical": 3,
@@ -185,12 +185,12 @@
         -1,
         0
       ],
-      "label": "○",
+      "label": "\u25cb",
       "layoutParams": {
-        "alignmentHorizontal": 0,
+        "alignmentHorizontal": 2,
         "alignmentVertical": 1,
-        "offsetHorizontal": 6,
-        "offsetVertical": 6,
+        "offsetHorizontal": 1,
+        "offsetVertical": 20,
         "height": 6,
         "width": 6
       },
@@ -207,12 +207,12 @@
         -2,
         0
       ],
-      "label": "×",
+      "label": "\u00d7",
       "layoutParams": {
         "alignmentHorizontal": 2,
-        "alignmentVertical": 1,
-        "offsetHorizontal": 6,
-        "offsetVertical": 6,
+        "alignmentVertical": 3,
+        "offsetHorizontal": 8,
+        "offsetVertical": 18,
         "height": 6,
         "width": 6
       },
@@ -229,17 +229,17 @@
         69,
         0
       ],
-      "label": "□",
+      "label": "\u25a1",
       "layoutParams": {
-        "alignmentHorizontal": 0,
-        "alignmentVertical": 3,
-        "offsetHorizontal": 25,
-        "offsetVertical": 7,
+        "alignmentHorizontal": 2,
+        "alignmentVertical": 1,
+        "offsetHorizontal": 15,
+        "offsetVertical": 20,
         "height": 6,
         "width": 6
       },
       "showInGame": true,
-      "showInMenu": false,
+      "showInMenu": true,
       "type": "button"
     },
     {
@@ -251,12 +251,12 @@
         -4,
         0
       ],
-      "label": "Kbd",
+      "label": "\u25ad",
       "layoutParams": {
-        "alignmentHorizontal": 4,
+        "alignmentHorizontal": 0,
         "alignmentVertical": 1,
-        "offsetHorizontal": -3,
-        "offsetVertical": 3,
+        "offsetHorizontal": 46,
+        "offsetVertical": 1,
         "height": 6,
         "width": 6
       },
@@ -273,11 +273,11 @@
         341,
         0
       ],
-      "label": "Control",
+      "label": "R1",
       "layoutParams": {
         "alignmentHorizontal": 2,
         "alignmentVertical": 1,
-        "offsetHorizontal": 6,
+        "offsetHorizontal": 15,
         "offsetVertical": 13,
         "height": 6,
         "width": 6
@@ -295,12 +295,12 @@
         340,
         0
       ],
-      "label": "Shift",
+      "label": "R2",
       "layoutParams": {
-        "alignmentHorizontal": 0,
-        "alignmentVertical": 1,
-        "offsetHorizontal": 6,
-        "offsetVertical": 13,
+        "alignmentHorizontal": 2,
+        "alignmentVertical": 3,
+        "offsetHorizontal": 15,
+        "offsetVertical": 18,
         "height": 6,
         "width": 6
       },
@@ -537,12 +537,12 @@
         -5,
         0
       ],
-      "label": "Edit",
+      "label": "L4",
       "layoutParams": {
-        "alignmentHorizontal": 4,
+        "alignmentHorizontal": 0,
         "alignmentVertical": 1,
-        "offsetHorizontal": -10,
-        "offsetVertical": 3,
+        "offsetHorizontal": 1,
+        "offsetVertical": 1,
         "height": 6,
         "width": 6
       },
@@ -559,17 +559,193 @@
         32,
         0
       ],
-      "label": "△",
+      "label": "\u25b3",
       "layoutParams": {
         "alignmentHorizontal": 2,
-        "alignmentVertical": 3,
-        "offsetHorizontal": 6,
-        "offsetVertical": 6,
+        "alignmentVertical": 1,
+        "offsetHorizontal": 8,
+        "offsetVertical": 13,
         "height": 6,
         "width": 6
       },
       "showInGame": true,
+      "showInMenu": true,
+      "type": "button"
+    },
+    {
+      "inputConfiguration": {
+        "movesCursor": false,
+        "sticky": true
+      },
+      "keyCodes": [
+        71,
+        0
+      ],
+      "label": "R3",
+      "layoutParams": {
+        "alignmentHorizontal": 2,
+        "alignmentVertical": 1,
+        "offsetHorizontal": 8,
+        "offsetVertical": 20,
+        "height": 6,
+        "width": 6
+      },
+      "showInGame": true,
+      "showInMenu": true,
+      "type": "button"
+    },
+    {
+      "inputConfiguration": {
+        "movesCursor": false,
+        "sticky": true
+      },
+      "keyCodes": [
+        0,
+        0
+      ],
+      "label": "R4",
+      "layoutParams": {
+        "alignmentHorizontal": 2,
+        "alignmentVertical": 1,
+        "offsetHorizontal": 1,
+        "offsetVertical": 13,
+        "height": 6,
+        "width": 6
+      },
+      "showInGame": true,
+      "showInMenu": true,
+      "type": "button"
+    },
+    {
+      "inputConfiguration": {
+        "movesCursor": false,
+        "sticky": true
+      },
+      "keyCodes": [
+        0,
+        0
+      ],
+      "label": "R5",
+      "layoutParams": {
+        "alignmentHorizontal": 2,
+        "alignmentVertical": 3,
+        "offsetHorizontal": 1,
+        "offsetVertical": 18,
+        "height": 6,
+        "width": 6
+      },
+      "showInGame": true,
+      "showInMenu": true,
+      "type": "button"
+    },
+    {
+      "inputConfiguration": {
+        "movesCursor": false,
+        "sticky": true
+      },
+      "keyCodes": [
+        0,
+        0
+      ],
+      "label": "L1",
+      "layoutParams": {
+        "alignmentHorizontal": 0,
+        "alignmentVertical": 1,
+        "offsetHorizontal": 8,
+        "offsetVertical": 1,
+        "height": 6,
+        "width": 6
+      },
+      "showInGame": true,
+      "showInMenu": true,
+      "type": "button"
+    },
+    {
+      "inputConfiguration": {
+        "movesCursor": false,
+        "sticky": true
+      },
+      "keyCodes": [
+        0,
+        0
+      ],
+      "label": "L5",
+      "layoutParams": {
+        "alignmentHorizontal": 0,
+        "alignmentVertical": 1,
+        "offsetHorizontal": 1,
+        "offsetVertical": 8,
+        "height": 6,
+        "width": 6
+      },
+      "showInGame": true,
+      "showInMenu": true,
+      "type": "button"
+    },
+    {
+      "inputConfiguration": {
+        "movesCursor": false,
+        "sticky": true
+      },
+      "keyCodes": [
+        0,
+        0
+      ],
+      "label": "L2",
+      "layoutParams": {
+        "alignmentHorizontal": 0,
+        "alignmentVertical": 1,
+        "offsetHorizontal": 8,
+        "offsetVertical": 8,
+        "height": 6,
+        "width": 6
+      },
+      "showInGame": true,
+      "showInMenu": true,
+      "type": "button"
+    },
+    {
+      "inputConfiguration": {
+        "movesCursor": false,
+        "sticky": true
+      },
+      "keyCodes": [
+        294,
+        0
+      ],
+      "label": "L3",
+      "layoutParams": {
+        "alignmentHorizontal": 0,
+        "alignmentVertical": 3,
+        "offsetHorizontal": 8,
+        "offsetVertical": 8,
+        "height": 4,
+        "width": 4
+      },
+      "showInGame": true,
       "showInMenu": false,
+      "type": "button"
+    },
+    {
+      "inputConfiguration": {
+        "movesCursor": false,
+        "sticky": true
+      },
+      "keyCodes": [
+        256,
+        0
+      ],
+      "label": "\u25b6",
+      "layoutParams": {
+        "alignmentHorizontal": 0,
+        "alignmentVertical": 1,
+        "offsetHorizontal": 53,
+        "offsetVertical": 1,
+        "height": 6,
+        "width": 6
+      },
+      "showInGame": true,
+      "showInMenu": true,
       "type": "button"
     }
   ],
