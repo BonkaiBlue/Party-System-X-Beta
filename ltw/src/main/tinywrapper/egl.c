@@ -197,6 +197,44 @@ static void find_esversion(context_t* context) {
     printf("LTW: Failed to detect OpenGL ES version");
 }
 
+static void log_graphics_capabilities(void) {
+    const char* vendor = (const char*) es3_functions.glGetString(GL_VENDOR);
+    const char* renderer = (const char*) es3_functions.glGetString(GL_RENDERER);
+    const char* version = (const char*) es3_functions.glGetString(GL_VERSION);
+    const char* shader_version =
+        (const char*) es3_functions.glGetString(GL_SHADING_LANGUAGE_VERSION);
+
+    GLint max_varying_vectors = 0;
+    GLint max_varying_components = 0;
+    GLint max_vertex_output_components = 0;
+    GLint max_fragment_input_components = 0;
+
+    es3_functions.glGetIntegerv(
+        GL_MAX_VARYING_VECTORS, &max_varying_vectors);
+    es3_functions.glGetIntegerv(
+        GL_MAX_VARYING_COMPONENTS, &max_varying_components);
+    es3_functions.glGetIntegerv(
+        GL_MAX_VERTEX_OUTPUT_COMPONENTS, &max_vertex_output_components);
+    es3_functions.glGetIntegerv(
+        GL_MAX_FRAGMENT_INPUT_COMPONENTS, &max_fragment_input_components);
+
+    printf("PSX-GFX: ===== capability snapshot =====\n");
+    printf("PSX-GFX: GL_VENDOR=%s\n", vendor ? vendor : "<null>");
+    printf("PSX-GFX: GL_RENDERER=%s\n", renderer ? renderer : "<null>");
+    printf("PSX-GFX: GL_VERSION=%s\n", version ? version : "<null>");
+    printf("PSX-GFX: GL_SHADING_LANGUAGE_VERSION=%s\n",
+           shader_version ? shader_version : "<null>");
+    printf("PSX-GFX: GL_MAX_VARYING_VECTORS=%d\n",
+           max_varying_vectors);
+    printf("PSX-GFX: GL_MAX_VARYING_COMPONENTS=%d\n",
+           max_varying_components);
+    printf("PSX-GFX: GL_MAX_VERTEX_OUTPUT_COMPONENTS=%d\n",
+           max_vertex_output_components);
+    printf("PSX-GFX: GL_MAX_FRAGMENT_INPUT_COMPONENTS=%d\n",
+           max_fragment_input_components);
+    printf("PSX-GFX: ===== end capability snapshot =====\n");
+}
+
 void basevertex_init(context_t* context);
 void buffer_copier_init(context_t* context);
 static void init_incontext(context_t* tw_context) {
@@ -208,6 +246,7 @@ static void init_incontext(context_t* tw_context) {
     }
 
     find_esversion(tw_context);
+    log_graphics_capabilities();
 
     basevertex_init(tw_context);
     buffer_copier_init(tw_context);
